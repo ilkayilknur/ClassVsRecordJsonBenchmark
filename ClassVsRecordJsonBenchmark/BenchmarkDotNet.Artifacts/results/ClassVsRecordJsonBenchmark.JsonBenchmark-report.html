@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>ClassVsRecordJsonBenchmark.JsonBenchmark-20210407-221519</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.12.1, OS=macOS 11.2.3 (20D91) [Darwin 20.3.0]
+Intel Core i9-8950HK CPU 2.90GHz (Coffee Lake), 1 CPU, 12 logical and 6 physical cores
+.NET Core SDK=5.0.201
+  [Host]     : .NET Core 5.0.4 (CoreCLR 5.0.421.11614, CoreFX 5.0.421.11614), X64 RyuJIT
+  DefaultJob : .NET Core 5.0.4 (CoreCLR 5.0.421.11614, CoreFX 5.0.421.11614), X64 RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>     Method</th><th>Mean</th><th>Error</th><th>StdDev</th>
+</tr>
+</thead><tbody><tr><td>SerializeRecord</td><td>398.9 ns</td><td>8.02 ns</td><td>19.82 ns</td>
+</tr><tr><td>SerializeClass</td><td>398.5 ns</td><td>8.66 ns</td><td>25.27 ns</td>
+</tr><tr><td>DeserializeRecord</td><td>635.0 ns</td><td>11.06 ns</td><td>23.58 ns</td>
+</tr><tr><td>DeserializeClass</td><td>507.1 ns</td><td>10.18 ns</td><td>28.55 ns</td>
+</tr></tbody></table>
+</body>
+</html>
